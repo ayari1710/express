@@ -17,20 +17,13 @@ app.get("/index.css",(req,res)=>{
     res.sendFile(__dirname+"/Public/index.css")
 })
 
-app.get("/",(req,res)=>{
-    res.sendFile(__dirname+"/Public/image.jpg")
-
-})
-
-
-
 function logger (req,res,next){
     var t= new Date().getHours();
 if (t >=9 && t < 17){
     next()  
 }  
 else{
-    res.send("Merci de nous contacter de 9h a 17h ")
+    res.send("Merci de nous contacter de 9h a 17h ",)
 }
 }
 
